@@ -1,9 +1,11 @@
+import { defineConfig } from 'vite';
 import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
-	plugins: [sveltekit()],
-	test: {
-		include: ['src/**/*.{test,spec}.{js,ts}']
-	}
+  plugins: [sveltekit()],
+  test: {
+    globals: true, // Ensure global test functions like describe, it, etc., are available
+    environment: 'jsdom', // Set environment to jsdom for DOM-related tests
+    setupFiles: 'src/setupTests.js' // Optional: Setup file for global configurations
+  }
 });
