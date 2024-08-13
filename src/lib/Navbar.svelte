@@ -39,7 +39,7 @@
         &#9776; <!-- Hamburger menu icon -->
       </button>
     </div>
-  
+
     {#if showMenu}
       <div class="md:hidden flex flex-col space-y-2 mt-2">
         {#each links as { href, name }}
