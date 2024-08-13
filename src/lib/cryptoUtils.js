@@ -107,6 +107,6 @@ export function getColor(crypto) {
         case 'ripple':
             return 'text-indigo-500';
         default:
-            return 'text-gray-800';
+            return 'text-gray-500';
     }
 }
