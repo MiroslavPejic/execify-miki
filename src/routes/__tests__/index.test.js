@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { render, fireEvent, waitFor } from '@testing-library/svelte';
 import { vi } from 'vitest';
 import Index from '../+page.svelte';
