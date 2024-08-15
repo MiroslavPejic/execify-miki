@@ -9,6 +9,8 @@
     let errorMessage = '';
 
     const signIn = async () => {
+        showModal = true;
+
         const { data, error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) {
             console.log('Sign-In Error:', error.message);
@@ -21,7 +23,10 @@
     };
 
     const signUp = async () => {
+        showModal = true;
+
         const { data, error } = await supabase.auth.signUp({ email, password });
+
         if (error) {
             console.log('Sign-Up Error:', error.message);
             errorMessage = error.message;
@@ -39,7 +44,9 @@
 
 <div class="min-h-screen flex items-center justify-center bg-gray-50">
     <div class="max-w-md w-full space-y-8">
-        <div>
+        <div class="text-center">
+            <!-- Bitcoin Logo -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Bitcoin.svg" alt="Bitcoin Logo" class="mx-auto h-16 w-16" />
             <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
                 Sign in or Sign up
             </h2>
@@ -69,4 +76,4 @@
     </div>
 </div>
 
-<Modal show={showModal} message={errorMessage} close={closeModal} />
+<Modal show={showModal} title={'SignIn'} message={errorMessage} close={closeModal} />

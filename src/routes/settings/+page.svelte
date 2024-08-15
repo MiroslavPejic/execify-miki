@@ -5,12 +5,6 @@
   import { onMount } from 'svelte';
   import '../../styles/settings.css'; // Import the CSS file
 
-  const links = [
-    { href: '/dashboard', name: 'Dashboard' },
-    { href: '/profile', name: 'Profile' },
-    { href: '/settings', name: 'Settings' },
-  ];
-
   let isDarkMode = false;
 
   // Function to apply the theme based on the isDarkMode variable
@@ -41,7 +35,7 @@
   }
 </script>
 
-<Navbar {links} />
+<Navbar />
 
 <div class={`min-h-screen flex items-center justify-center p-6 ${isDarkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'}`}>
   <div class="max-w-md w-full bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">

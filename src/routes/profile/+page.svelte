@@ -3,12 +3,6 @@
   import { fetchUser } from '$lib/cryptoUtils'; // Import from CryptoUtils
   import { onMount } from 'svelte';
 
-  const links = [
-    { href: '/dashboard', name: 'Dashboard' },
-    { href: '/profile', name: 'Profile' },
-    { href: '/settings', name: 'Settings' },
-  ];
-
   /**
 	 * @type {{ user: null; error: string; } | { user: import("@supabase/auth-js").User; error: null; } | null}
 	 */
@@ -42,7 +36,7 @@
   });
 </script>
 
-<Navbar {links} />
+<Navbar />
 
 <main class={`min-h-screen flex items-center justify-center p-6 ${isDarkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'}`}>
   <div class="max-w-lg w-full bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">

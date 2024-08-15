@@ -1,11 +1,8 @@
 <script>
     import { supabase } from '$lib/supabaseClient'; // Ensure you have the Supabase client imported
     import { goto } from '$app/navigation'; // Import goto for navigation
-  
-    /**
-	 * @type {any[]}
-	 */
-     export let links = [];
+    import links from '$lib/links.json';
+
     let showMenu = false;
   
     const handleLogout = async () => {
@@ -17,8 +14,7 @@
         goto('/'); // Redirect to login or home page after logout
       }
     };
-
-  </script>
+</script>
   
   <nav class="bg-blue-600 text-white dark:bg-gray-800 dark:text-gray-200 p-4 navbar">
     <div class="container mx-auto flex justify-between items-center">

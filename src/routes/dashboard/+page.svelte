@@ -76,18 +76,12 @@
 
   loadUserData();
 
-  const links = [
-    { href: '/dashboard', name: 'Dashboard' },
-    { href: '/profile', name: 'Profile' },
-    { href: '/settings', name: 'Settings' },
-  ];
-
   const closeModal = () => {
     showModal = false;
   };
 </script>
-  
-<Navbar {links} />
+
+<Navbar />
 
 <div class="flex min-h-screen dark:bg-gray-900 dark:text-gray-200">
   <!-- Left side: List of Cryptos -->
